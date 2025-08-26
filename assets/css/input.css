@@ -15,15 +15,6 @@ button {
 
 .navbar {
     background-color: rgba(25, 23, 22, 0.6);
-    animation: animate left 300ms ease-out;
-}
-@keyframes animate {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%);
-    }
 }
 
 
@@ -178,7 +169,7 @@ p {
   }
 
   /* Mobile menu */
-  @media (max-width: 600px)  {
+  @media (max-width: 1023px)  {
     .navbar {
       position: fixed;
       top: 0;
@@ -195,7 +186,12 @@ p {
       padding-top: 80px;
     }
     .navbar.show {
-      right: 30%;
+      right: 0;
+    }
+
+    .navbar.show nav,
+    .navbar.show .header-btns {
+      display: flex;
     }
     .navbar.show ~ #overlay {
       display: block;
@@ -205,10 +201,12 @@ p {
       font-size: 50px;
     }
     .navbar nav {
+      display: none;
       width: 100%;
       flex-direction: column;
     }
     .navbar .header-btns {
+      display: none;
       width: 100%;
       flex-direction: column;
     }
