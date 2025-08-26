@@ -136,7 +136,7 @@ p {
 
   .imageReveal {
     animation: imageReveal both;
-    animation-timeline: view(50% 20%);
+    animation-timeline: view(30% 10%);
   }
   @keyframes imageReveal {
     from {
